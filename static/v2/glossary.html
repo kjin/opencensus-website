@@ -171,28 +171,28 @@
                         <h1>Glossary</h1>
                           <br>
                             <p><b>Tracing</b></p>
-                            <p>Tracking the entire path of execution of a service or a function from start until end. e.g. During an upload, tracking when a file handle is received, opened, sanitized and uploaded to the cloud.</p>
+                            <p>Tracing refers to tracking the entire path of execution of a service or a function from start until end. e.g. During an upload, tracking when a file handle is received, opened, sanitized and uploaded to the cloud.</p>
                             <br><hr>
                             
                             <p><b>Span</b></p>
-                            <p>The unit of traversal during tracing. Each span might have a children spans within it or it might be the first in its generation and called a root.</p>
+                            <p>A span is the individual unit of traversal during tracing. Each span might have a children spans within it or it might be the first in its generation and called a root.</p>
                             <br><hr>
                             
                             <p><b>Root Span</b></p>
-                            <p>The first span in a trace; this span does not have a parent.</p>
+                            <p>A root span is the first span in a trace; this span does not have a parent.</p>
                             <br><hr>
                             
                             <p><b>Child Span</b></p>
-                            <p>A span with a parent span; it represents a call that originates from an already traced one.<br>
+                            <p>A child span is a span with a parent; it represents a call that originates from an already traced one.<br>
                             A span MAY or MAY NOT be a child and spans can coexist as siblings on the same level.</p>
                             <br><hr>
                             
                             <p><b>Trace</b></p>
-                            <p>A tree of spans. A trace has a root span that encapsulates all the spans from start to end, and the children spans being the distinct calls invoked in between.</p>
+                            <p>A trace is a tree of spans. A trace has a root span that encapsulates all the spans from start to end, and the children spans being the distinct calls invoked in between.</p>
                             <br><hr>
                             
                             <p><b>Sampling</b></p>
-                            <p>Is the mechanism that determines how often the system will trace a request.<br>There are  3 types of sampling:</p>
+                            <p>Sampling describes the mechanism that determines how often the system will trace a request.<br>There are 3 types of sampling:</p>
                             <p><ul><br>
                             <li class="gloss5"><b>Always sample:</b></li>
                             <li class="gloss">With this sampling, every single request is traced.</li>
@@ -206,11 +206,11 @@
                             <br><hr>
                             
                             <p><b>Measure</b></p>
-                            <p>Any quantifiable measurement/metric that you would like to track, it could be number of requests, number of failed responses, bytes downloaded, cache misses, number of radios purchsed etc.</p>
+                            <p>A measure is any quantifiable measurement/metric that you would like to track, such as the number of requests, number of failed responses, bytes downloaded, cache misses, number of radios purchsed etc.</p>
                             <br><hr>
                             
                             <p><b>Aggregation</b></p>
-                            <p>The style of characterizing measures. We have 4 types of Aggregations:</p><br>
+                            <p>Aggregation refers to the style of characterizing measures. There are 4 types of Aggregations:</p><br>
                             <p><ul>
                             <li class="gloss5"><b>Count Aggregation:</b></li>
                             <li class="gloss">Characterizing measures as a sum of increasing quantiles e.g number of requests overtime always increases and is quantified by a natural number<br>i.e. >= 1</li><br>
@@ -241,19 +241,19 @@
                             <br><hr>
                             
                             <p><b>Row</b></p>
-                            <p>It groups the data aggregation with distinct tags.</p>
+                            <p>A row groups the data aggregation with distinct tags.</p>
                             <br><hr>
                             
                             <p><b>RPC</b></p>
-                            <p>Remote Procedure Call. The mechanism of invoking a procedure/subroutine in a different scope/address space.</p>
+                            <p>RPC stands for Remote Procedure Call, the mechanism of invoking a procedure/subroutine in a different scope/address space.</p>
                             <br><hr>
                             
                             <p><b>Context Propagation</b></p>
-                            <p>The mechanism by which identifiable information about a span, e.g. traceId, spanId and traceOptions are sent over RPC scope boundaries. This span can then be linked as a remote parent. This movement could translate to getting information such as “the data storage team” invoked delete on the “database records” service which then invoked the “data consistency service”.</p>
+                            <p>Context propagation is the mechanism by which identifiable information about a span, e.g. traceId, spanId and traceOptions are sent over RPC scope boundaries. This span can then be linked as a remote parent. This movement could translate to getting information such as “the data storage team” invoked delete on the “database records” service which then invoked the “data consistency service”.</p>
                             <br><hr>
                             
                             <p><b>Exporters</b></p>
-                            <p>The adapters that allow for metrics and traces collected by OpenCensus to be consumed by other services.</p>
+                            <p>Exporters are adapters that allow for metrics and traces collected by OpenCensus to be consumed by other services.</p>
                             <p>OpenCensus adds minimal overhead to your applications while still giving you the ability to export metrics and traces in near real-time to various backends of your choice, simultaneously e.g Stackdriver Monitoring and Tracing, Prometheus, SignalFX, Jaeger. The multiplicity and convenience enables many application performance monitoring teams and even administrators visualize your applications. Your teams don’t have to expend precious time in maintenance and integration; OpenCensus should just work. We have some examples that you can check out to instrument your backends too. With the ability to introspect your applications, you can apply sound engineering practices making your teams even more productive.</p>
                             <br><br>
                             
